@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,6 +20,7 @@ public class LoginStepDefinition {
 	{
 			System.setProperty("webdriver.chrome.driver","D:\\Automation\\Selenium\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			driver.get("https://demo.scientificstudy.in");
 	}
 	
@@ -33,32 +35,37 @@ public class LoginStepDefinition {
 	@Then("^user selects role as \"([^\"]*)\"$")
 	public void user_selects_role_as(String arg1)  
 	{
-			    
+			Select Role=new Select(driver.findElement(By.id("ddlUserType")));
+			Role.selectByVisibleText("Staff");	   
 	}
 
 	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_enters_username_and_password(String arg1, String arg2) 
 	{
 			driver.findElement(By.id("txtUserName")).sendKeys("admin");
-			driver.findElement(By.id("txtPassword")).sendKeys("schoolbesterp");
-	    
+			driver.findElement(By.id("txtPassword")).sendKeys("schoolbesterp");    
 	}
 
 	@Then("^user clicks on login button$")
-	public void user_clicks_on_login_button()  {
-	    // Write code here that turns the phrase above into concrete actions
-	    
+	public void user_clicks_on_login_button() throws Exception  
+	{
+	    	driver.findElement(By.id("btnLogin")).click();
+	    	Thread.sleep(5000);
+	    	driver.findElement(By.xpath("//div[@class='btnlink continue']")).click();    
 	}
 
 	@Then("^user is on home page$")
-	public void user_is_on_home_page()  {
-	    // Write code here that turns the phrase above into concrete actions
-	    
+	public void user_is_on_home_page()  
+	{
+			String title = driver.getTitle();
+			System.out.println(title);
+			Assert.assertEquals("AdminDashboard", title);    
 	}
 
 	@Then("^Close the browser$")
-	public void close_the_browser()  {
-	    // Write code here that turns the phrase above into concrete actions
+	public void close_the_browser()  
+	{
+			driver.quit();
 	}
 	
 
