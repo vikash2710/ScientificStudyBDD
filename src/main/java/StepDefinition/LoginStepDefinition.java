@@ -51,7 +51,7 @@ public class LoginStepDefinition {
 	{
 	    	driver.findElement(By.id("btnLogin")).click();
 	    	Thread.sleep(5000);
-	    	driver.findElement(By.xpath("//div[@class='btnlink continue']")).click();    
+	    	driver.findElement(By.cssSelector("a.btnlink.continue")).click();    
 	}
 
 	@Then("^user is on home page$")
