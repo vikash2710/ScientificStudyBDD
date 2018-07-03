@@ -1,8 +1,10 @@
 package StepDefinition;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.interactions.Actions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -35,9 +37,10 @@ public class LoginStepDefinition {
 	}
 
 	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_enters_and(String arg1, String arg2) 
+	public void user_enters_username_and_password(String arg1, String arg2) 
 	{
-	    // Write code here that turns the phrase above into concrete actions
+			driver.findElement(By.id("txtUserName")).sendKeys("admin");
+			driver.findElement(By.id("txtPassword")).sendKeys("schoolbesterp");
 	    
 	}
 
