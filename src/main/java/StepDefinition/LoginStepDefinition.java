@@ -33,24 +33,24 @@ public class LoginStepDefinition {
 	}
 	
 	@Then("^user selects role as \"([^\"]*)\"$")
-	public void user_selects_role_as(String arg1)  
+	public void user_selects_role_as(String Role)  
 	{
-			Select Role=new Select(driver.findElement(By.id("ddlUserType")));
-			Role.selectByVisibleText("Staff");	   
+			Select role=new Select(driver.findElement(By.id("ddlUserType")));
+			role.selectByVisibleText(Role);	   
 	}
 
 	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_enters_username_and_password(String arg1, String arg2) 
+	public void user_enters_username_and_password(String username, String password) 
 	{
-			driver.findElement(By.id("txtUserName")).sendKeys("admin");
-			driver.findElement(By.id("txtPassword")).sendKeys("schoolbesterp");    
+			driver.findElement(By.id("txtUserName")).sendKeys(username);
+			driver.findElement(By.id("txtPassword")).sendKeys(password);    
 	}
 
 	@Then("^user clicks on login button$")
 	public void user_clicks_on_login_button() throws Exception  
 	{
 	    	driver.findElement(By.id("btnLogin")).click();
-	    	Thread.sleep(5000);
+	    	Thread.sleep(6000);
 	    	driver.findElement(By.cssSelector("a.btnlink.continue")).click();    
 	}
 

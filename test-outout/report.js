@@ -67,7 +67,7 @@ formatter.examples({
     {
       "cells": [
         "admin",
-        "test@123",
+        "schoolbesterp",
         "Staff"
       ],
       "line": 16,
@@ -104,7 +104,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "user enters \"admin\" and \"test@123\"",
+  "name": "user enters \"admin\" and \"schoolbesterp\"",
   "matchedColumns": [
     0,
     1
@@ -130,14 +130,14 @@ formatter.match({
   "location": "LoginStepDefinition.User_is_already_on_Login_Page()"
 });
 formatter.result({
-  "duration": 15162853485,
+  "duration": 10168753227,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.title_of_login_page_is_Scientific_Study()"
 });
 formatter.result({
-  "duration": 39807964,
+  "duration": 26246642,
   "status": "passed"
 });
 formatter.match({
@@ -150,7 +150,7 @@ formatter.match({
   "location": "LoginStepDefinition.user_selects_role_as(String)"
 });
 formatter.result({
-  "duration": 368144646,
+  "duration": 230326887,
   "status": "passed"
 });
 formatter.match({
@@ -160,35 +160,35 @@ formatter.match({
       "offset": 13
     },
     {
-      "val": "test@123",
+      "val": "schoolbesterp",
       "offset": 25
     }
   ],
   "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 715429538,
+  "duration": 370429176,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_clicks_on_login_button()"
 });
 formatter.result({
-  "duration": 24608614829,
+  "duration": 27433288179,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_is_on_home_page()"
 });
 formatter.result({
-  "duration": 11083028,
+  "duration": 14987816,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.close_the_browser()"
 });
 formatter.result({
-  "duration": 877407450,
+  "duration": 957983215,
   "status": "passed"
 });
 });

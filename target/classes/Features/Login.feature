@@ -12,6 +12,6 @@ Then Close the browser
 
 
 Examples:
-	| username | password | Role  |
-	| admin    | test@123 | Staff |
+	| username | password      | Role  |
+	| admin    | schoolbesterp | Staff |
 	
