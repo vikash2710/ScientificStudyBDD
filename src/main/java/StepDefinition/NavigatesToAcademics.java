@@ -24,7 +24,7 @@ public class NavigatesToAcademics extends TestBase 	{
 			academicpage = homepage.clickonacademics();
 			String academicstitle = academicpage.ValidateAcademicsPageTitle();
 			Assert.assertEquals("ACADEMICS MANAGEMENT", academicstitle);
-			System.out.print("\n" + "Academics Page Title is " + academicstitle);
+			System.out.print("\n" + "Academics Page Title is " + academicstitle + "\n");
 			
 				
 			

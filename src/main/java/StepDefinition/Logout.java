@@ -20,7 +20,7 @@ public class Logout extends TestBase  {
 		Thread.sleep(5000);
 		String title = loginpage.ValidateLoginPageTitle();
 		Assert.assertEquals("Scientific Study", title);
-		System.out.print("\n" + "Logout Successful" + "Page Title is " + title);
+		System.out.print("\n" + "Logout Successful " + "Page Title is " + title + "\n");
 		driver.quit();
 		
 	}

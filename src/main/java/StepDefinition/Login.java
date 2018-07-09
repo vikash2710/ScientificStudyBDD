@@ -19,11 +19,11 @@ public class Login extends TestBase {
 		TestBase.initialization();
 		loginpage = new LoginPage();
 		String title = loginpage.ValidateLoginPageTitle();
-		System.out.print("Login Page Title is " + title);
+		System.out.print("Login Page Title is " + title + "\n");
 		Assert.assertEquals("Scientific Study", title);
 		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
 		String Hometitle = homepage.ValidateHomePageTitle();
 		Assert.assertEquals("AdminDashboard", Hometitle);
-		System.out.print("\n" + "Home Page Title is " + Hometitle + "\n" + "Login Succesfully");
+		System.out.print("\n" + "Home Page Title is " + Hometitle + "\n" + "Login Succesfully" + "\n");
 	}
 }
