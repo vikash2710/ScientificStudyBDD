@@ -1,26 +1,33 @@
 package StepDefinition;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.junit.Assert;
 
-import cucumber.api.java.en.Then;
+import com.pages.AcademicPage;
+import com.pages.HomePage;
+import com.util.TestBase;
+
 import cucumber.api.java.en.When;
 
 
-public class NavigatesToAcademics 	
-
-{
-	public static WebDriver driver=null;
+public class NavigatesToAcademics extends TestBase 	{
+	
+	HomePage homepage;
+	AcademicPage academicpage;
+	
 	
 	@When("^user navigates to academics module$")
-	public void user_navigates_to_academics_module() throws Throwable 
+	public void user_navigates_to_academics_module() 
 	{
+			homepage = new HomePage();
+			homepage.scrollto();
+			academicpage = homepage.clickonacademics();
+			String academicstitle = academicpage.ValidateAcademicsPageTitle();
+			Assert.assertEquals("ACADEMICS MANAGEMENT", academicstitle);
+			System.out.print("\n" + "Academics Page Title is " + academicstitle);
 			
-			driver.findElement(By.id("logoutdashboard")).click();
-//			((JavascriptExecutor)driver).executeScript("scroll(0,600)");
-//			driver.findElement(By.id("btn_/academics")).click();
+				
+			
 		
 	    
 	}

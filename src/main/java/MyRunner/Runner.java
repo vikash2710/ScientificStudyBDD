@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-				features = ".\\src\\main\\java\\Features\\Login.feature",
+				features = ".\\src\\main\\java\\Features\\Academics.feature",
 				glue={"StepDefinition"},
 				format= {"pretty","html:test-outout", "json:json_output/cucumber.json", "junit:junit_xml/cucumber.xml"}, //to generate different types of reporting
 				monochrome = true, //display the console output in a proper readable format

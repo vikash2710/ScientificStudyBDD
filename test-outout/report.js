@@ -1,77 +1,65 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./src/main/java/Features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./src/main/java/Features/Academics.feature");
 formatter.feature({
   "line": 1,
-  "name": "Login Feature",
+  "name": "Academics Page",
   "description": "",
-  "id": "login-feature",
+  "id": "academics-page",
   "keyword": "Feature"
 });
 formatter.scenario({
   "line": 3,
-  "name": "Login Scenario",
+  "name": "Verify Academics page",
   "description": "",
-  "id": "login-feature;login-scenario",
+  "id": "academics-page;verify-academics-page",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 5,
-  "name": "user is already on Login Page",
+  "name": "user login into the website",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "title of login page is Scientific Study",
+  "name": "user navigates to academics module",
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "user login into the web",
+  "name": "user verify the page",
   "keyword": "Then "
 });
 formatter.step({
   "line": 8,
-  "name": "user is on home page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 9,
-  "name": "Close the browser",
-  "keyword": "Then "
+  "name": "user logout from the Application",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "LoginStepDefinition.User_is_already_on_Login_Page()"
+  "location": "Login.user_login_into_the_web()"
 });
 formatter.result({
-  "duration": 9923328596,
+  "duration": 34536886324,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginStepDefinition.title_of_login_page_is_Scientific_Study()"
+  "location": "NavigatesToAcademics.user_navigates_to_academics_module()"
 });
 formatter.result({
-  "duration": 110471838,
+  "duration": 7627301265,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginStepDefinition.user_login_into_the_web()"
+  "location": "VerifyAcademicsPage.user_verify_the_page()"
 });
 formatter.result({
-  "duration": 32101664358,
+  "duration": 362664512,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginStepDefinition.user_is_on_home_page()"
+  "location": "Logout.user_logout_from_the_Application()"
 });
 formatter.result({
-  "duration": 13544213,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginStepDefinition.close_the_browser()"
-});
-formatter.result({
-  "duration": 887487441,
+  "duration": 8630916049,
   "status": "passed"
 });
 });
