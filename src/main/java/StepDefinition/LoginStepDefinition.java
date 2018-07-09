@@ -7,59 +7,49 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import com.pages.HomePage;
+import com.pages.LoginPage;
+import com.util.TestBase;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class LoginStepDefinition {
+public class LoginStepDefinition extends TestBase {
 	
-	WebDriver driver;
+	LoginPage loginpage;
+	HomePage homepage;
+	
 	
 	@Given("^user is already on Login Page$")
 	public void User_is_already_on_Login_Page()
 	{
-			System.setProperty("webdriver.chrome.driver","D:\\Automation\\Selenium\\chromedriver_win32\\chromedriver.exe");
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.get("https://demo.scientificstudy.in");
+		TestBase.initialization();
 	}
 	
 	@When("^title of login page is Scientific Study$")
 	public void title_of_login_page_is_Scientific_Study() 
 	{
-			String title = driver.getTitle();
-			System.out.println(title);
+			loginpage = new LoginPage();
+			String title = loginpage.ValidateLoginPageTitle();
 			Assert.assertEquals("Scientific Study", title);
 	}
 	
-	@Then("^user selects role as \"([^\"]*)\"$")
-	public void user_selects_role_as(String Role)  
+	   
+
+	@Then("^user login into the web$")
+	public void user_login_into_the_web() 
 	{
-			Select role=new Select(driver.findElement(By.id("ddlUserType")));
-			role.selectByVisibleText(Role);	   
+		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));   
 	}
 
-	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_enters_username_and_password(String username, String password) 
-	{
-			driver.findElement(By.id("txtUserName")).sendKeys(username);
-			driver.findElement(By.id("txtPassword")).sendKeys(password);    
-	}
-
-	@Then("^user clicks on login button$")
-	public void user_clicks_on_login_button() throws Exception  
-	{
-	    	driver.findElement(By.id("btnLogin")).click();
-	    	Thread.sleep(6000);
-	    	driver.findElement(By.cssSelector("a.btnlink.continue")).click();    
-	}
+	
 
 	@Then("^user is on home page$")
 	public void user_is_on_home_page()  
 	{
-			String title = driver.getTitle();
-			System.out.println(title);
-			Assert.assertEquals("AdminDashboard", title);    
+			String Hometitle = homepage.ValidateHomePageTitle();
+			Assert.assertEquals("AdminDashboard", Hometitle);
 	}
 
 	@Then("^Close the browser$")

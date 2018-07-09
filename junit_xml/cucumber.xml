@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="39.202015">
-    <testcase classname="Login Feature" name="Login Scenario" time="39.202015">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="43.036496">
+    <testcase classname="Login Feature" name="Login Scenario" time="43.036496">
         <system-out>
             <![CDATA[Given user is already on Login Page.........................................passed
 When title of login page is Scientific Study................................passed
-Then user selects role as "Staff"...........................................passed
-Then user enters "admin" and "schoolbesterp"................................passed
-Then user clicks on login button............................................passed
+Then user login into the web................................................passed
 Then user is on home page...................................................passed
 Then Close the browser......................................................passed
 ]]>

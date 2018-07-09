@@ -3,16 +3,16 @@
     "line": 1,
     "elements": [
       {
-        "line": 16,
+        "line": 3,
         "name": "Login Scenario",
         "description": "",
-        "id": "login-feature;login-scenario;;2",
+        "id": "login-feature;login-scenario",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 10168753227,
+              "duration": 9923328596,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 26246642,
+              "duration": 110471838,
               "status": "passed"
             },
             "line": 6,
@@ -36,69 +36,22 @@
           },
           {
             "result": {
-              "duration": 230326887,
+              "duration": 32101664358,
               "status": "passed"
             },
             "line": 7,
-            "name": "user selects role as \"Staff\"",
+            "name": "user login into the web",
             "match": {
-              "arguments": [
-                {
-                  "val": "Staff",
-                  "offset": 22
-                }
-              ],
-              "location": "LoginStepDefinition.user_selects_role_as(String)"
+              "location": "LoginStepDefinition.user_login_into_the_web()"
             },
-            "matchedColumns": [
-              2
-            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 370429176,
+              "duration": 13544213,
               "status": "passed"
             },
             "line": 8,
-            "name": "user enters \"admin\" and \"schoolbesterp\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "admin",
-                  "offset": 13
-                },
-                {
-                  "val": "schoolbesterp",
-                  "offset": 25
-                }
-              ],
-              "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 27433288179,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user clicks on login button",
-            "match": {
-              "location": "LoginStepDefinition.user_clicks_on_login_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 14987816,
-              "status": "passed"
-            },
-            "line": 10,
             "name": "user is on home page",
             "match": {
               "location": "LoginStepDefinition.user_is_on_home_page()"
@@ -107,10 +60,10 @@
           },
           {
             "result": {
-              "duration": 957983215,
+              "duration": 887487441,
               "status": "passed"
             },
-            "line": 11,
+            "line": 9,
             "name": "Close the browser",
             "match": {
               "location": "LoginStepDefinition.close_the_browser()"
@@ -124,6 +77,6 @@
     "description": "",
     "id": "login-feature",
     "keyword": "Feature",
-    "uri": "Login.feature"
+    "uri": "./src/main/java/Features/Login.feature"
   }
 ]
