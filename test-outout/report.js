@@ -7,30 +7,46 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Verify Academics page",
+  "line": 13,
+  "name": "Create Subject",
   "description": "",
-  "id": "academics-page;verify-academics-page",
+  "id": "academics-page;create-subject",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@CreateSubject"
+    }
+  ]
 });
 formatter.step({
-  "line": 5,
+  "line": 15,
   "name": "user login into the website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
+  "line": 16,
   "name": "user navigates to academics module",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "user verify the page",
+  "line": 17,
+  "name": "user select Subject from Masters dropdown",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 18,
+  "name": "user enter subject name and save it",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 19,
+  "name": "user verify success toast notification",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 20,
   "name": "user logout from the Application",
   "keyword": "And "
 });
@@ -38,28 +54,30 @@ formatter.match({
   "location": "Login.user_login_into_the_web()"
 });
 formatter.result({
-  "duration": 43342654690,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "NavigatesToAcademics.user_navigates_to_academics_module()"
 });
 formatter.result({
-  "duration": 7207228475,
-  "status": "passed"
+  "status": "skipped"
 });
-formatter.match({
-  "location": "VerifyAcademicsPage.user_verify_the_page()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 275260245,
-  "status": "passed"
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.match({
   "location": "Logout.user_logout_from_the_Application()"
 });
 formatter.result({
-  "duration": 8116311140,
-  "status": "passed"
+  "status": "skipped"
 });
 });

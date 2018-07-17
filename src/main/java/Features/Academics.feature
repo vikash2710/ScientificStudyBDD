@@ -1,5 +1,6 @@
 Feature: Academics Page
 
+@VerifyAcademicspage
 Scenario: Verify Academics page
 
 Given user login into the website
@@ -8,6 +9,7 @@ Then  user verify the page
 And   user logout from the Application
 
 
+@CreateSubject
 Scenario: Create Subject
 
 Given user login into the website
