@@ -1,5 +1,11 @@
 package com.pages;
 
-public class AcademicMastersPage {
+import com.util.TestBase;
+
+public class AcademicMastersPage extends TestBase {
+	
+	
+	
+	
 
 }

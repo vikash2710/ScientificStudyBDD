@@ -3,6 +3,7 @@ package com.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.util.TestBase;
 
@@ -23,6 +24,9 @@ public class AcademicPage extends TestBase {
 	
 	@FindBy(xpath = "(//button[@type='button'])[19]")
 	WebElement AcademicReports;
+	
+	@FindBy(xpath= "(//button[@type='button'])[16]")
+	WebElement MasterDropDown;
 	
 	public AcademicPage() {
 		PageFactory.initElements(driver, this);
@@ -50,6 +54,13 @@ public class AcademicPage extends TestBase {
 	
 	public boolean verifyAcademicReports(){
 		return AcademicReports.isDisplayed();
+	}
+	
+	public AcademicMastersPage subject() {
+		Select select=new Select(MasterDropDown);
+		select.selectByVisibleText("Subjects");
+		
+		return new AcademicMastersPage();
 	}
 
 }
