@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="59.103936">
-    <testcase classname="Academics Page" name="Verify Academics page" time="59.103936">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="58.941455">
+    <testcase classname="Academics Page" name="Verify Academics page" time="58.941455">
         <system-out>
             <![CDATA[Given user login into the website...........................................passed
 When user navigates to academics module.....................................passed

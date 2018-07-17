@@ -38,28 +38,28 @@ formatter.match({
   "location": "Login.user_login_into_the_web()"
 });
 formatter.result({
-  "duration": 41113871900,
+  "duration": 43342654690,
   "status": "passed"
 });
 formatter.match({
   "location": "NavigatesToAcademics.user_navigates_to_academics_module()"
 });
 formatter.result({
-  "duration": 9519901843,
+  "duration": 7207228475,
   "status": "passed"
 });
 formatter.match({
   "location": "VerifyAcademicsPage.user_verify_the_page()"
 });
 formatter.result({
-  "duration": 343309955,
+  "duration": 275260245,
   "status": "passed"
 });
 formatter.match({
   "location": "Logout.user_logout_from_the_Application()"
 });
 formatter.result({
-  "duration": 8126852358,
+  "duration": 8116311140,
   "status": "passed"
 });
 });

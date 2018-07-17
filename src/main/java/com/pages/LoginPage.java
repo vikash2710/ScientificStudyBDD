@@ -12,8 +12,8 @@ public class LoginPage extends TestBase {
 
 	// Page Factory
 	
-//	@FindBy(id= "ddlUserType")
-//	WebElement role;
+	@FindBy(id= "ddlUserType")
+	WebElement type;
 	
 	@FindBy(id = "txtUserName")
 	WebElement username;
@@ -43,9 +43,9 @@ public class LoginPage extends TestBase {
 		return driver.getTitle();
 	}
 	
-	public HomePage login(String id, String pwd) {
-		Select role=new Select(driver.findElement(By.id("ddlUserType")));
-		role.selectByVisibleText("Staff");
+	public HomePage login(String role, String id, String pwd) {
+		Select select=new Select(type);
+		select.selectByVisibleText(role);
 		username.sendKeys(id);
 		password.sendKeys(pwd);
 		login.click();

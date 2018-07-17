@@ -33,7 +33,7 @@ public class LoginStepDefinition extends TestBase {
 	@Then("^user login into the web$")
 	public void user_login_into_the_web() 
 	{
-		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));   
+		homepage = loginpage.login(prop.getProperty("yrrole"), prop.getProperty("username"), prop.getProperty("password"));   
 	}
 
 	

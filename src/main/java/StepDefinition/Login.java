@@ -21,7 +21,7 @@ public class Login extends TestBase {
 		String title = loginpage.ValidateLoginPageTitle();
 		System.out.print("Login Page Title is " + title + "\n");
 		Assert.assertEquals("Scientific Study", title);
-		homepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password")); 
+		homepage = loginpage.login(prop.getProperty("yrrole"), prop.getProperty("username"), prop.getProperty("password")); 
 		String Hometitle = homepage.ValidateHomePageTitle();
 		Assert.assertEquals("AdminDashboard", Hometitle);
 		System.out.print("\n" + "Home Page Title is " + Hometitle + "\n" + "Login Succesfully" + "\n");
