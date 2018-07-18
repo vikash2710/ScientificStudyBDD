@@ -34,29 +34,35 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "status": "skipped"
             },
             "line": 17,
             "name": "user select Subject from Masters dropdown",
-            "match": {},
+            "match": {
+              "location": "MasterDropDown.user_select_Subject_from_Masters_dropdown()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "status": "skipped"
             },
             "line": 18,
             "name": "user enter subject name and save it",
-            "match": {},
+            "match": {
+              "location": "CreateSubject.user_enter_subject_name_and_save_it()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "status": "skipped"
             },
             "line": 19,
-            "name": "user verify success toast notification",
-            "match": {},
+            "name": "user verify toast notification",
+            "match": {
+              "location": "Toastnotification.user_verify_toast_notification()"
+            },
             "keyword": "Then "
           },
           {
@@ -75,6 +81,10 @@
           {
             "line": 12,
             "name": "@CreateSubject"
+          },
+          {
+            "line": 12,
+            "name": "@AcademicsPage"
           }
         ]
       }
@@ -83,6 +93,6 @@
     "description": "",
     "id": "academics-page",
     "keyword": "Feature",
-    "uri": "./src/main/java/Features/Academics.feature"
+    "uri": "Academics.feature"
   }
 ]

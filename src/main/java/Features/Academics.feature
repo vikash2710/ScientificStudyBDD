@@ -1,6 +1,6 @@
 Feature: Academics Page
 
-@VerifyAcademicspage
+@VerifyAcademicspage @AcademicsPage
 Scenario: Verify Academics page
 
 Given user login into the website
@@ -9,12 +9,12 @@ Then  user verify the page
 And   user logout from the Application
 
 
-@CreateSubject
-Scenario: Create Subject
+@CreateSubject @AcademicsPage
+Scenario: Create Subject 
 
 Given user login into the website
 When  user navigates to academics module
 Then  user select Subject from Masters dropdown
 Then  user enter subject name and save it 
-Then  user verify success toast notification 
+Then  user verify toast notification 
 And   user logout from the Application

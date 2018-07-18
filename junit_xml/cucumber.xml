@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0">
     <testcase classname="Academics Page" name="Create Subject" time="0">
-        <failure message="The scenario has pending or undefined step(s)">
+        <system-out>
             <![CDATA[Given user login into the website...........................................skipped
 When user navigates to academics module.....................................skipped
-Then user select Subject from Masters dropdown..............................undefined
-Then user enter subject name and save it....................................undefined
-Then user verify success toast notification.................................undefined
+Then user select Subject from Masters dropdown..............................skipped
+Then user enter subject name and save it....................................skipped
+Then user verify toast notification.........................................skipped
 And user logout from the Application........................................skipped
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

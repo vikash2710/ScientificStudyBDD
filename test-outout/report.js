@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./src/main/java/Features/Academics.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Academics.feature");
 formatter.feature({
   "line": 1,
   "name": "Academics Page",
@@ -17,6 +17,10 @@ formatter.scenario({
     {
       "line": 12,
       "name": "@CreateSubject"
+    },
+    {
+      "line": 12,
+      "name": "@AcademicsPage"
     }
   ]
 });
@@ -42,7 +46,7 @@ formatter.step({
 });
 formatter.step({
   "line": 19,
-  "name": "user verify success toast notification",
+  "name": "user verify toast notification",
   "keyword": "Then "
 });
 formatter.step({
@@ -62,17 +66,23 @@ formatter.match({
 formatter.result({
   "status": "skipped"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "MasterDropDown.user_select_Subject_from_Masters_dropdown()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
 });
-formatter.match({});
+formatter.match({
+  "location": "CreateSubject.user_enter_subject_name_and_save_it()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Toastnotification.user_verify_toast_notification()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({
   "location": "Logout.user_logout_from_the_Application()"
