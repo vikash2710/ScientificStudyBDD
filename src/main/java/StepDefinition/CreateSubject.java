@@ -1,17 +1,23 @@
 package StepDefinition;
 
-import com.util.TestBase;
 
+import com.pages.AcademicMastersPage;
+import com.util.TestBase;
 import cucumber.api.java.en.Then;
+
 
 public class CreateSubject extends TestBase {
 	
-	
-	@Then("^user enter subject name and save it$")
-	public void user_enter_subject_name_and_save_it() throws Throwable {
-	    
-	}
-	
+	String sheetName = "CreateSubject";
+	AcademicMastersPage academicmasterspage;
+
 	
 
+	@Then("^user enter \"([^\"]*)\" , \"([^\"]*)\" , \"([^\"]*)\" and save it$")
+	public void user_enter_and_save_it(String SubjectName, String PracticalPaper, String CoScholastic) throws Throwable {
+		
+		academicmasterspage = new AcademicMastersPage();
+		academicmasterspage.CreateSubject("test", "Yes", "No");
+		
+	}
 }

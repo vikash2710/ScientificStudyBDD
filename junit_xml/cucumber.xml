@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0">
-    <testcase classname="Academics Page" name="Create Subject" time="0">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="73.268735">
+    <testcase classname="Academics Page" name="Create Grade" time="73.268735">
         <system-out>
-            <![CDATA[Given user login into the website...........................................skipped
-When user navigates to academics module.....................................skipped
-Then user select Subject from Masters dropdown..............................skipped
-Then user enter subject name and save it....................................skipped
-Then user verify toast notification.........................................skipped
-And user logout from the Application........................................skipped
+            <![CDATA[Given user login into the website...........................................passed
+When user navigates to academics module.....................................passed
+Then user select Grading from Masters dropdown..............................passed
+Then user enter "<Scale Name>" and "<Scale Description>" and save it........passed
+And user logout from the Application........................................passed
 ]]>
         </system-out>
     </testcase>

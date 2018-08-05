@@ -1,5 +1,6 @@
 Feature: Login Feature
 
+@Login
 Scenario: Login Scenario
 
 Given user is already on Login Page

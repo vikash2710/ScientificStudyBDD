@@ -14,11 +14,11 @@ public class TestUtil extends TestBase {
 	public static long PAGE_LOAD_TIMEOUT= 20;
 	public static long IMPLICIT_WAIT = 10;
 	
-	public void switchToFrame(){
-	driver.switchTo().frame("mainpanel");
-	}
+//	public void switchToFrame(){
+//	driver.switchTo().frame("mainpanel");
+//	}
 	
-	public static String TESTDATA_SHEET_PATH = "./SchoolManagement.xlsx";
+	public static String TESTDATA_SHEET_PATH = "D:\\Automation\\ScientificStudyBDD\\ScientificStudy\\SchoolManagement.xlsx";
 	
 	static Workbook book;
 	static Sheet sheet;

@@ -1,0 +1,11 @@
+SubjectName	PracticalPaper	CoScholastic
+V_Eng	No	Yes
+V_Bio	Yes	No
+V_Che	Yes	No
+V_Phy	Yes	No
+V_Math	No	No
+V_Hindi	No	Yes
+V_Sans	No	Yes
+V-His	No	No
+V_Geo	No	No
+V_Civics	No	No

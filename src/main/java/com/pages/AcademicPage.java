@@ -1,10 +1,9 @@
-package com.pages;
+	package com.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
 import com.util.TestBase;
 
 public class AcademicPage extends TestBase {
@@ -56,11 +55,19 @@ public class AcademicPage extends TestBase {
 		return AcademicReports.isDisplayed();
 	}
 	
-	public AcademicMastersPage subject() {
-		Select select=new Select(MasterDropDown);
-		select.selectByVisibleText("Subjects");
-		
-		return new AcademicMastersPage();
+	public AcademicMastersPage subject(String item) {
+	    WebElement dropDown = MasterDropDown;
+	    dropDown.click();
+	    driver.findElement(By.xpath("//a[@ui-sref='" +item+ "']")).click();
+	    return new AcademicMastersPage();
 	}
+	
+	public AcademicMastersGradingPage grading(String item) {
+	    WebElement dropDown = MasterDropDown;
+	    dropDown.click();
+	    driver.findElement(By.xpath("//a[@ui-sref='" +item+ "']")).click();
+	    return new AcademicMastersGradingPage();
+	}
+	
 
 }
