@@ -69,5 +69,21 @@ public class AcademicPage extends TestBase {
 	    return new AcademicMastersGradingPage();
 	}
 	
+	public AcademicAddExamPage addexam(String item) {
+	    WebElement dropDown = MasterDropDown;
+	    dropDown.click();
+	    driver.findElement(By.xpath("//a[@ui-sref='" +item+ "']")).click();
+	    return new AcademicAddExamPage();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

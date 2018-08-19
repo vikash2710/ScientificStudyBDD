@@ -29,3 +29,23 @@ Then  user select Grading from Masters dropdown
 Then  user enter "<Scale Name>" and "<Scale Description>" and save it 
 And   user logout from the Application
 
+@AddExam
+Scenario: Add Exam
+
+Given user login into the website
+When  user navigates to academics module
+Then  user select AddExam from Masters dropdown
+Then  user enter "<Exam Title>" and "<Start Time>" and "<End Time>" and save it 
+And   user logout from the Application
+
+
+
+
+
+
+
+
+
+
+
+
