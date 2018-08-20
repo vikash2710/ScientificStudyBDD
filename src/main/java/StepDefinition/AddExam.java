@@ -16,7 +16,7 @@ public class AddExam extends TestBase{
 	{
 		
 		academicaddExampage = new AcademicAddExamPage();
-		academicaddExampage.addexam("test", "14/Sep/2018", "16/Sep/2018");
+		academicaddExampage.addexam("test", "14/September/2018", "16/September/2018");
 	    
 	}
 

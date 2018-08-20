@@ -23,7 +23,7 @@ public class AcademicAddExamPage extends TestBase {
 	@FindBy(id = "txtCalendarFrom")
 	WebElement CalFrom;
 	
-	@FindBy(name = "txtCalendarTo")
+	@FindBy(id = "txtCalendarTo")
 	WebElement CalTo;
 	
 	@FindBy(xpath = "//a[@title='Next']")
@@ -38,27 +38,22 @@ public class AcademicAddExamPage extends TestBase {
 	@FindBy(xpath = "//span[@class='ui-datepicker-year']")
 	WebElement Year;
 	
+	@FindBy(id = "btnSubmit")
+	WebElement Save;
+	
 	
 	public AcademicAddExamPage() {
 		PageFactory.initElements(driver, this);
 	}
 	
-//	public void addexam() {
-//		
-//	}
-	
-	public void addexam(String testtitle, String StartDate ,String EndDate) throws ParseException
-	{
+	public void date(String givendate) throws ParseException
+		{
 		
-		TestTitle.sendKeys(testtitle);
-		String date[]=StartDate.split("/");
+		String date[]=givendate.split("/");
 		String day = date[0];
 		String MonthName = date[1];
 		String year = date[2];
-		
-		//Clicking on calendar to open calendar widget
-		CalFrom.click();
-		
+	
 		// Retrieving current year value
 		String currentYear= Year.getText();
 		
@@ -95,22 +90,8 @@ public class AcademicAddExamPage extends TestBase {
 						d.click();
 						break;
 					}
-				}
-		
-		
-//		public static int getMonthJavaInt(String MonthName) throws ParseException 
-//				{
-//
-//					Date date = new SimpleDateFormat("MMMM").parse(MonthName);
-//					Calendar cal = Calendar.getInstance();
-//					cal.setTime(date);
-//					return cal.get(Calendar.MONTH);
-//				}
+				}	
 				
-		
-		
-		
-			
 	}
 
 	
@@ -124,5 +105,25 @@ public class AcademicAddExamPage extends TestBase {
 		}
 	
 
+	
+	public void addexam(String testtitle, String StartDate ,String EndDate) throws ParseException 
+	{
+		
+		TestTitle.sendKeys(testtitle);
+		
+		//Clicking on calendar to open calendar widget
+		CalFrom.click();
+		date(StartDate);
+		CalTo.click();
+		date(EndDate);
+		Save.click();
+		
+		
+		
+		
+	}
+
+	
+	
 }
 
