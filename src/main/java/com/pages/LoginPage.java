@@ -23,7 +23,7 @@ public class LoginPage extends TestBase {
 	@FindBy(id = "btnLogin")
 	WebElement login;
 	
-	@FindBy(css = "a.btnlink.continue")
+	@FindBy(xpath = "//a[@class='btnlink continue']")
 	WebElement Continue;
 	
 	@FindBy(xpath = "//button[@class='pushcrew-chrome-style-notification-btn pushcrew-btn-close']")
@@ -48,7 +48,7 @@ public class LoginPage extends TestBase {
 		username.sendKeys(id);
 		password.sendKeys(pwd);
 		login.click();
-//		Continue.click();
+		Continue.click();
 		Popup.click();
 		
 		return new HomePage();

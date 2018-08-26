@@ -18,15 +18,15 @@ public class TestUtil extends TestBase {
 //	driver.switchTo().frame("mainpanel");
 //	}
 	
-	public static String TESTDATA_SHEET_PATH = "D:\\Automation\\ScientificStudyBDD\\ScientificStudy\\SchoolManagement.xlsx";
+//	public static String TESTDATA_SHEET_PATH = "D:\\Automation\\ScientificStudyBDD\\ScientificStudy\\SchoolManagement.xlsx";
 	
 	static Workbook book;
 	static Sheet sheet;
 	
-	public static Object[][] getTestData(String sheetName) {
+	public static Object[][] getTestData(String sheetName , String sheetpath) {
 		FileInputStream file = null;
 		try {
-			file = new FileInputStream(TESTDATA_SHEET_PATH);
+			file = new FileInputStream(sheetpath);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
