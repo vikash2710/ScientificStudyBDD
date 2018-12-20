@@ -29,6 +29,12 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//button[@class='pushcrew-chrome-style-notification-btn pushcrew-btn-close']")
 	WebElement Popup;
 	
+	@FindBy(linkText ="Request here")
+	WebElement SMS;
+	
+//	@FindBy(xpath = "//a[contains(text(),'Request here')]")
+
+	
 	
 //	Initializing the page object
 	
@@ -42,14 +48,17 @@ public class LoginPage extends TestBase {
 		return driver.getTitle();
 	}
 	
-	public HomePage login(String role, String id, String pwd) {
+	public HomePage login(String role, String id, String pwd) throws Throwable {
 		Select select=new Select(type);
 		select.selectByVisibleText(role);
 		username.sendKeys(id);
 		password.sendKeys(pwd);
 		login.click();
-		Continue.click();
-		Popup.click();
+//		Continue.click();
+		Thread.sleep(3000);
+//		Popup.click();
+		SMS.click();
+		Thread.sleep(3000);
 		
 		return new HomePage();
 	}

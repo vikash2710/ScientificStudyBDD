@@ -1,6 +1,8 @@
 package StepDefinition;
 
-import org.junit.Assert;
+
+
+import org.testng.Assert;
 
 import com.pages.HomePage;
 import com.pages.LoginPage;

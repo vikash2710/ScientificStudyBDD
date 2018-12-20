@@ -1,10 +1,12 @@
 package StepDefinition;
 
+import org.testng.Assert;
+
 import com.pages.AcademicPage;
 import com.util.TestBase;
 
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
+
 
 public class VerifyAcademicsPage extends TestBase {
 	

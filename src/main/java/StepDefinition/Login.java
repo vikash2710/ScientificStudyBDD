@@ -1,6 +1,8 @@
 package StepDefinition;
 
-import org.junit.Assert;
+
+import org.testng.Assert;
+
 import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.util.TestBase;
@@ -14,7 +16,7 @@ public class Login extends TestBase {
 	HomePage homepage;
 	
 	@Then("^user login into the website$")
-	public void user_login_into_the_web() 
+	public void user_login_into_the_web() throws Throwable 
 	{
 		TestBase.initialization();
 		loginpage = new LoginPage();
